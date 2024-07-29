@@ -42,13 +42,11 @@ async def start():
                 server_file_name = data["serverfilename"]
                 videoid = data["id"]
 
-                # for item in data['locations']:
-                #     if item["enname"].lower() == my_location.lower():
+                for item in data['locations']:
+                    if item["enname"].lower() == my_location.lower():
                         # if await sensor():
-                
-                
-
-                await desk(server_file_name, equipid, videoid, equipip, gpslat, gpslan)
+                        
+                        await desk(server_file_name, equipid, videoid, equipip, gpslat, gpslan)
     
     destroy_overlay()
 
